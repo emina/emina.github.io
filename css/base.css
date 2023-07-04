@@ -1,5 +1,9 @@
 @import "light.min.css";
 
+body {
+  min-width: 60ch;
+}
+
 footer { 
   margin-top: 2rem; 
   margin-bottom: 2rem; 
