@@ -1,7 +1,7 @@
-@import "base.css";
+@import "light.min.css";
 
 body { 
-  font-size: small; 
+  font-size: .75rem; 
   line-height: 1.25; 
   max-width: 80ch; 
   counter-reset: pub;
@@ -88,7 +88,38 @@ td:last-child {
   padding-right: 0;
   width: auto;
   white-space:nowrap;
-  font-size: small;
+}
+
+footer { 
+  margin-top: 2rem; 
+  margin-bottom: 2rem; 
+  font-size: .65rem; 
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: .65rem; 
+  }  
+
+  header div {
+    float: none;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+  }
+
+  footer { 
+    font-size: .55rem; 
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: .55rem; 
+  }  
+
+  footer { 
+    font-size: .4rem; 
+  }
 }
 
 @media print {
@@ -100,6 +131,7 @@ td:last-child {
     margin: 1in;
   }
   h1, h2, h3 {
-    page-break-after: avoid; }
+    page-break-after: avoid; 
+  }
 }
 
