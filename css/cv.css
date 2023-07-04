@@ -1,0 +1,105 @@
+@import "base.css";
+
+body { 
+  font-size: small; 
+  line-height: 1.25; 
+  max-width: 80ch; 
+  counter-reset: pub;
+}
+
+ol { 
+  list-style-type: none; 
+  list-style-position: outside; 
+  padding: 0; 
+  margin: 0;  
+}
+
+ol li { 
+  counter-increment: pub; 
+  text-indent: -2rem; 
+  padding-left: 2rem; 
+  margin-top: .25rem; 
+}
+
+ol li::before { 
+  content: "[" counter(pub) "]"; 
+  display: inline-block; 
+  width: 1.5rem; 
+  font-size: smaller; 
+  text-align: right; 
+  margin-right: .5rem; 
+}
+
+header { 
+  border-bottom: 1px solid var(--b-line); 
+} 
+    
+header h1 { 
+  display: inline-block; 
+  margin-bottom: .5rem; 
+}
+
+header div { 
+  float: right; 
+  margin-top: 2rem;  
+  line-height: 1.5; 
+}
+
+h2 { 
+  font-size: 1.25rem; 
+}
+
+h3 { 
+  font-size: 1rem;  
+}
+
+address { 
+  margin: 0; 
+  font-style: normal; 
+}
+
+address::after { 
+  content: "@cs.washington.edu"; 
+}
+
+table { 
+  width: 100%; 
+}
+
+tr { 
+  border: 0; 
+}
+
+th,
+td {
+  padding: .1rem .1rem;
+  vertical-align: top; 
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+  padding-left: 0; padding-right: 0; 
+}
+
+th:last-child,
+td:last-child {
+  text-align: right;
+  padding-right: 0;
+  width: auto;
+  white-space:nowrap;
+  font-size: small;
+}
+
+@media print {
+  footer { display: none; }
+  a {
+    color: black;
+  }
+  @page {
+    margin: 1in;
+  }
+  h1, h2, h3 {
+    page-break-after: avoid; }
+}
+
