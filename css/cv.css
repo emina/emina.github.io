@@ -41,7 +41,7 @@ header h1 {
 
 header div { 
   float: right; 
-  margin-top: 2rem;  
+  margin-top: 3.2rem;
   line-height: 1.5; 
 }
 
@@ -59,7 +59,7 @@ address {
 }
 
 address::after { 
-  content: "@cs.washington.edu"; 
+  content: "@alum.mit.edu"; 
 }
 
 table { 
